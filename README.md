@@ -4,7 +4,7 @@
 * For legal reasons, no spreadsheets are included in this repo
 
 # How to Use:
-* Open pycharm project
+* Open pycharm project or Jupyter Notebook 
 * Ensure that paths to files in checkOliListPayments.py and checkSessionCharges.py are pointing to the correct location
 * Right click main.py and click <Run 'main'>
 * Watch as the files are magically generated for you!
