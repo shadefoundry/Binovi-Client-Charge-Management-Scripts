@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[10]:
+# In[11]:
 
 
 from pandas import DataFrame, read_excel
@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from dateutil import parser
 from pprint import pprint
+import xlrd
+import xlsxwriter
 
 # lists used throughout the class
 toFlag = []
