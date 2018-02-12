@@ -1,3 +1,4 @@
+import os
 from pandas import DataFrame, read_excel
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -5,6 +6,8 @@ from dateutil import parser
 from pprint import pprint
 import xlrd
 import xlsxwriter
+from pathlib import Path
+
 
 # lists used throughout the class
 toFlag = []
@@ -87,6 +90,13 @@ class checkOliListPayments():
 
     def outputFlaggedData(self):
         global i
+        #delete files if they exist already to prevent data duplication
+        try:
+            os.remove("flaggedCharges.xlsx")
+            os.remove("flaggedChargesNoZeros.xlsx")
+        except OSError:
+            pass
+
         df = pd.DataFrame(columns=['Id', 'sku', 'regId', 'orgId', 'createdAt', 'actualCost', 'reasonToFlag'])
         # output with 0s
         for i in range(len(toFlag)):
